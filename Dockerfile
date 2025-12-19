@@ -7,7 +7,7 @@ RUN gradle bootJar -x test --no-daemon
 # Run stage
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-COPY --from=build /app/build/libs/tracker-1.0.0.jar app.jar
+COPY --from=build /app/build/libs/backend-1.0.0.jar app.jar
 EXPOSE 8080
 ENV PORT=8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
