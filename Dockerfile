@@ -1,4 +1,4 @@
-# Build stage
+# Build stage - cache bust v2
 FROM gradle:8.5-jdk17 AS build
 WORKDIR /app
 COPY . .
