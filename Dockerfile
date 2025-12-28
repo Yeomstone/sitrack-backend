@@ -12,5 +12,5 @@ WORKDIR /app
 COPY --from=build /app/app.jar app.jar
 EXPOSE 8080
 ENV PORT=8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+CMD ["sh", "-c", "java -Dserver.port=${PORT} -jar app.jar"]
 
