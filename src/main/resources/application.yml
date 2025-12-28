@@ -41,7 +41,7 @@ spring:
 
 # 서버 설정
 server:
-  port: 8080
+  port: ${PORT:8080}
   servlet:
     context-path: /
     encoding:
